@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Caso 1. Javascript</title>
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <h1>Calcula la letra de tu DNI</h1>
+
+    <form >
+        <fieldset>
+            <legend>Documento de Identidad</legend>
+            <label >Introduce los números
+                <input type="number" onKeyUp="handleEvent()" max="99999999" minlength="8" min="0" id="dni">  
+            </label>
+            <br/><br/>
+            <label >Introduce la letra del DNI
+                <input type="text" onKeyUp="handleEvent()" maxlength="1" id="id-letter">
+            </label>    
+
+        </fieldset>
+        <br/>
+    </form>
+    <button type="submit" onclick="findIdLetter()" >Calcular</button>
+
+        <h2 >La letra del DNI es:  <strong id="letter-found"></strong> </h2>
+        <h3 id="result"></h3>         
+</body>
+</html>
